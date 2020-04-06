@@ -91,5 +91,5 @@ def route_api_register():
     return ret+"<script>window.setTimeout(function(){ window.location.href = '/'; }, 2000);</script>"
 
 
-if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+if __name__ == '__main__':
+    app.run()
