@@ -1,0 +1,11 @@
+{% extends "template_standard.html" %}
+
+{% block content %}
+{% if "username" in context: %}
+<h1>Welcome, {{context["username"]}}.</h1>
+{% else: %}
+<h1>Welcome.</h1>
+{% endif %}
+<p>This website contains a super secret page that you can only access after registering and logging in.</p>
+<p>Legend has it that this super secret page contains a picture of a cat in a hotdog costume.</p>
+{% endblock content %}

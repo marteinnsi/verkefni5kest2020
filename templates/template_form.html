@@ -1,0 +1,14 @@
+{% extends "template_standard.html" %}
+
+{% block content %}
+
+<div class="form">
+    <h1 class="form-title">{{context.title}}</h1>
+    <div class="form-content">
+        <form method="POST" action="{{post_action}}">
+            {% block form_content %} {% endblock %}
+            <input type="submit" value="{{context.title}}">
+        </form>
+    </div>
+</div>
+{% endblock %}

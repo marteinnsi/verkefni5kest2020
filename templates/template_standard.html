@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{context.title}} - Verkefni 5</title>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <div class="grid">
+        <div class="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/secured">Secret page</a></li>
+                <span class="right-side">
+                    {% if "username" in context: %}
+                    <li><a href="/logout">Log out</a></li>
+                    {% else: %}
+                    <li><a href="/register">Register</a></li>
+                    <li><a href="/login">Log in</a></li>
+                    {% endif %}
+                </span>
+            </ul>
+        </div>
+
+        <div class="content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2020 Marteinn</p>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

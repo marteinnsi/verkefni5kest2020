@@ -1,0 +1,10 @@
+{% extends "template_form.html" %}
+
+{% set post_action = "/api/register" %}
+
+{% block form_content %}
+<label for="fname">Username:</label>
+<input type="text" id="username" name="username"><br><br>
+<label for="lname">Password:</label>
+<input type="password" id="password" name="password"><br><br>
+{% endblock %}
