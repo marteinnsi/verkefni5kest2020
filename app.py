@@ -13,7 +13,7 @@ firebaseConfig = {
 }
 
 app = Flask(__name__)
-app.secret_key = os.urandom(42)
+app.secret_key = '11753502-23bb-45fd-addb-9f54c56252c7'
 fb = pyrebase.initialize_app(firebaseConfig)
 db = fb.database()
 
@@ -87,7 +87,7 @@ def route_api_register():
         ret = "Username is taken"
     else:
         db.child("users").child(username).set({"password": password})
-        ret = "Registered %s and %s" % (username, password)
+        ret = "Registered"
     return ret+"<script>window.setTimeout(function(){ window.location.href = '/'; }, 2000);</script>"
 
 
