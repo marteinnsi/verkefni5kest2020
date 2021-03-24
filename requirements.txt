@@ -28,7 +28,7 @@ Pyrebase4==4.3.0
 python-jwt==2.0.1
 requests==2.23.0
 requests-toolbelt==0.9.1
-rsa==4.0
+rsa==4.1
 six==1.14.0
 urllib3==1.25.8
 Werkzeug==1.0.1
